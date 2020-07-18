@@ -1,0 +1,32 @@
+<p class="alert alert-success" id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+      <% if @user.img.attached? %>
+        <div class="col-xs-12 col-sm-3">
+          <img src="<%= url_for(@user.img) %>" class="img-thumbnail w-100">
+        </div>
+      <% end %>
+    <div class="col-xs-12 col-sm-9">
+      <p>
+        <strong>Name:</strong>
+        <%= @user.name %>
+      </p>
+
+      <p>
+        <strong>Desc:</strong>
+        <%= @user.desc %>
+      </p>
+
+      <p>
+        <strong>Link:</strong>
+        <%= @user.link %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center; margin: 2em">
+<%= link_to 'Edit', edit_user_path(@user), :class => "btn btn-primary" %>
+<%= link_to 'Back', users_path, :class => "btn btn-secondary" %>
+</div>

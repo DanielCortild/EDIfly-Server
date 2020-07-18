@@ -1,0 +1,34 @@
+<% if notice %>
+  <p class="alert alert-success" id="notice"><%= notice %></p>
+<% end %>
+
+<div class="container">
+  <div class="row">
+      <% if @team.img.attached? %>
+        <div class="col-xs-12 col-sm-3">
+          <img src="<%= url_for(@team.img) %>" class="img-thumbnail w-100">
+        </div>
+      <% end %>
+    <div class="col-xs-12 col-sm-9">
+      <p>
+        <strong>Name:</strong>
+        <%= @team.name %>
+      </p>
+
+      <p>
+        <strong>Role:</strong>
+        <%= @team.role %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= @team.desc %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center; margin: 2em">
+  <%= link_to 'Edit', edit_team_path(@team), :class => "btn btn-primary" %>
+  <%= link_to 'Back', teams_path, :class => "btn btn-secondary" %>
+</div>

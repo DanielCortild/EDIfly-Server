@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @whitepaper.title %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @whitepaper.filename %>
+</p>
+
+<a href="<%= url_for(@whitepaper.file) %>" class="btn btn-info" target="_blank">Open File</a> 
+<br /> <br />
+
+<div class="actions text-center">
+  <%= link_to 'Edit', edit_whitepaper_path(@whitepaper), :class => "btn btn-primary" %>
+  <%= link_to 'Back', downloads_path, :class => "btn btn-secondary" %>
+</div>

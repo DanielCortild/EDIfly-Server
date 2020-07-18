@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @faq.title %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @faq.filename %>
+</p>
+
+<a class="btn btn-info" href="<%= url_for(@faq.file) %>" target="_blank">Open File</a>
+<br><br>
+
+<%= link_to 'Edit', edit_faq_path(@faq), :class => "btn btn-primary" %>
+<%= link_to 'Back', downloads_path, :class => "btn btn-secondary" %>

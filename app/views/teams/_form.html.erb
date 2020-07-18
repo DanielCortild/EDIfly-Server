@@ -1,0 +1,22 @@
+<%= bootstrap_form_for(team) do |form| %>
+  <% if team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+        <% team.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.text_field :name %>
+  <%= form.text_field :role %>
+  <%= form.text_area :desc %>
+  <%= form.file_field :img %>
+
+  <%= form.primary %>
+  <%= link_to 'Back', teams_path, :class => "btn btn-secondary" %>
+
+<% end %>
