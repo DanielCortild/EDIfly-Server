@@ -24,12 +24,13 @@ class ApiController < ApplicationController
         date: testimonial.date
       }},
       downloads: {
-        whitepapers: @whitepapers.map {|whitepaper|{
+        'Project Briefing': [],
+        'Whitepapers': @whitepapers.map {|whitepaper|{
           title: whitepaper.title,
           filename: whitepaper.filename,
           file_url: whitepaper.file.attached? ? url_for(whitepaper.file) : ''
         }},
-        faqs: @faqs.map {|faq|{
+        'Frequently Asked Questions': @faqs.map {|faq|{
           title: faq.title,
           filename: faq.filename,
           file_url: faq.file.attached? ? url_for(faq.file) : ''
