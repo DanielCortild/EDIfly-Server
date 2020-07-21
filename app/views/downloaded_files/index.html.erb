@@ -1,28 +1,24 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Downloaded Files</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
+      <th>Downloaded At</th>
       <th>Name</th>
       <th>Company</th>
       <th>Email</th>
       <th>File</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @downloaded_files.each do |downloaded_file| %>
       <tr>
+        <td><%= downloaded_file.created_at %></td>
         <td><%= downloaded_file.name %></td>
         <td><%= downloaded_file.company %></td>
         <td><%= downloaded_file.email %></td>
         <td><%= downloaded_file.file %></td>
-        <td><%= link_to 'Show', downloaded_file %></td>
-        <td><%= link_to 'Edit', edit_downloaded_file_path(downloaded_file) %></td>
-        <td><%= link_to 'Destroy', downloaded_file, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

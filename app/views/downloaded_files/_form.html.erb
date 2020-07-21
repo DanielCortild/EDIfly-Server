@@ -1,4 +1,4 @@
-<%= form_with(model: downloaded_file, local: true) do |form| %>
+<%= bootstrap_form_for(downloaded_file) do |form| %>
   <% if downloaded_file.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(downloaded_file.errors.count, "error") %> prohibited this downloaded_file from being saved:</h2>
@@ -11,27 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+  <%= form.text_field :name %>
+  <%= form.text_field :company %>
+  <%= form.text_field :email %>
+  <%= form.text_field :file %>
+  <%= form.primary %>
+  <%= link_to 'Back', downloaded_files_path, :class => "btn btn-secondary" %>
 
-  <div class="field">
-    <%= form.label :company %>
-    <%= form.text_field :company %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :file %>
-    <%= form.text_field :file %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
