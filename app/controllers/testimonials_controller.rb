@@ -2,8 +2,6 @@ class TestimonialsController < ApplicationController
   before_action :authenticate_admin!
   before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
 
-  # GET /testimonials
-  # GET /testimonials.json
   def index
     @testimonials = Testimonial.all
 
@@ -18,22 +16,16 @@ class TestimonialsController < ApplicationController
     end
   end
 
-  # GET /testimonials/1
-  # GET /testimonials/1.json
   def show
   end
 
-  # GET /testimonials/new
   def new
     @testimonial = Testimonial.new
   end
 
-  # GET /testimonials/1/edit
   def edit
   end
 
-  # POST /testimonials
-  # POST /testimonials.json
   def create
     @testimonial = Testimonial.new(testimonial_params)
 
@@ -48,8 +40,6 @@ class TestimonialsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /testimonials/1
-  # PATCH/PUT /testimonials/1.json
   def update
     respond_to do |format|
       if @testimonial.update(testimonial_params)
@@ -62,8 +52,6 @@ class TestimonialsController < ApplicationController
     end
   end
 
-  # DELETE /testimonials/1
-  # DELETE /testimonials/1.json
   def destroy
     @testimonial.destroy
     respond_to do |format|
@@ -73,12 +61,10 @@ class TestimonialsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_testimonial
       @testimonial = Testimonial.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def testimonial_params
       params.require(:testimonial).permit(:name, :from, :testimonial, :date)
     end

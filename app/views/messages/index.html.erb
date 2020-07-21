@@ -1,0 +1,25 @@
+<h1>Messages</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Sent At</th>
+      <th>Name</th>
+      <th>Company</th>
+      <th>Email</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= message.created_at %></td>
+        <td><%= message.name %></td>
+        <td><%= message.company %></td>
+        <td><%= message.email %></td>
+        <td><%= message.message %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

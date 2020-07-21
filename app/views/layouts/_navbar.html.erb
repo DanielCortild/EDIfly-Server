@@ -19,6 +19,9 @@
       <li class="nav-item <%= 'active' if params[:controller] == 'downloaded_files' %>">
         <a class="nav-link" href="<%= downloaded_files_path %>">Downloads</a>
       </li>
+      <li class="nav-item <%= 'active' if params[:controller] == 'messages' %>">
+        <a class="nav-link" href="<%= messages_path %>">Messages</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="<%= api_path %>">API</a>
       </li>
