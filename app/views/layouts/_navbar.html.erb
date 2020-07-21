@@ -12,10 +12,13 @@
         <a class="nav-link" href="<%= testimonials_path %>">Testimonials</a>
       </li>
       <li class="nav-item <%= 'active' if (params[:controller] == 'whitepapers' || params[:controller] == 'faqs' || params[:controller] == 'downloads') %>">
-        <a class="nav-link" href="<%= downloads_path %>">Downloads</a>
+        <a class="nav-link" href="<%= downloads_path %>">Files</a>
       </li>
     </ul>
     <ul class="navbar-nav pull-right">
+      <li class="nav-item <%= 'active' if params[:controller] == 'downloaded_files' %>">
+        <a class="nav-link" href="<%= downloaded_files_path %>">Downloads</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="<%= api_path %>">API</a>
       </li>

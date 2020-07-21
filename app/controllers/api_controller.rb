@@ -1,4 +1,5 @@
 class ApiController < ApplicationController
+  skip_before_action :verify_authenticity_token
 
   def index
     @home = Home.all.first
@@ -37,6 +38,20 @@ class ApiController < ApplicationController
         }},
       }
     }
+  end
+
+  def downloaded_file
+    @downloaded_file = DownloadedFile.new(downloaded_file_params)
+
+    if @downloaded_file.save
+      DownloadedFileMailer.with(downloaded_file: @downloaded_file).new_downloaded_file_email.deliver_later
+    end
+  end
+
+  private
+
+  def downloaded_file_params
+    params.require(:downloaded_file).permit(:name, :company, :email, :file)
   end
 
 end

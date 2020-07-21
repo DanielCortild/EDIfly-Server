@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
-  resources :downloaded_files
-  get 'api/index'
   devise_for :admins
+
+  get '/downloaded_files', to: 'downloaded_files#index'
+  post '/downloaded_files', to: 'api#downloaded_file'
   get '/', to: 'homes#index'
+  get '/downloads', to: 'downloads#index'
+  get '/api', to: 'api#index'
+
   resources :homes
   resources :faqs
   resources :whitepapers
   resources :testimonials
   resources :users
   resources :teams
-  get '/downloads', to: 'downloads#index'
-  get '/api', to: 'api#index'
+
 end

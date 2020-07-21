@@ -18,12 +18,9 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_caching = false
   config.action_mailer.perform_deliveries = true
-
   config.action_mailer.delivery_method = :smtp
-  host = 'gmail.com' #replace with your own url
+  host = 'gmail.com'
   config.action_mailer.default_url_options = { host: host }
-
-  # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
