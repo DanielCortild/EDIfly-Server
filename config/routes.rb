@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :downloaded_files
   get 'api/index'
   devise_for :admins
   get '/', to: 'homes#index'

@@ -61,3 +61,5 @@ gem 'rack-cors'
 
 gem 'pg'
 gem 'devise'
+
+# un52gm*Y*y25NZBjVuJv&yhF2uLhBd+-Cj2E6Rj?6=TRWr^q#SAT%B+5Bg%rnEBP=pYvGE9_=*U%A+4J8PJ%WSg&_E^Yhb+hP5Lc

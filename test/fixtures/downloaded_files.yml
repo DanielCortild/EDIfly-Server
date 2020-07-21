@@ -1,0 +1,7 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: "Daniel Cortild"
+  company: "Techies Lab"
+  email: "daniel.cortild@gmail.com"
+  file: "FAQ"

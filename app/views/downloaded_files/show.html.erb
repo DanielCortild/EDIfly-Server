@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @downloaded_file.name %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @downloaded_file.company %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @downloaded_file.email %>
+</p>
+
+<p>
+  <strong>File:</strong>
+  <%= @downloaded_file.file %>
+</p>
+
+<%= link_to 'Edit', edit_downloaded_file_path(@downloaded_file) %> |
+<%= link_to 'Back', downloaded_files_path %>

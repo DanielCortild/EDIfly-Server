@@ -1,0 +1,2 @@
+export EDIFLY_SENDER_MAIL=edifly.server@gmail.com
+export EDIFLY_SENDER_PASSWORD=pkwypjmwqefiosaw
