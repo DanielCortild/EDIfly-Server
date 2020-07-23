@@ -1,5 +1,4 @@
 class DownloadsController < ApplicationController
-  before_action :authenticate_admin!
 
   def index
     @whitepapers = Whitepaper.all

@@ -16,10 +16,10 @@
       </li>
     </ul>
     <ul class="navbar-nav pull-right">
-      <li class="nav-item <%= 'active' if params[:controller] == 'downloaded_files' %>">
+      <li class="nav-item <%= 'active' if params[:controller] == 'user_responses' && params[:action] == 'downloaded_files' %>">
         <a class="nav-link" href="<%= downloaded_files_path %>">Downloads</a>
       </li>
-      <li class="nav-item <%= 'active' if params[:controller] == 'messages' %>">
+      <li class="nav-item <%= 'active' if params[:controller] == 'user_responses' && params[:action] == 'messages' %>">
         <a class="nav-link" href="<%= messages_path %>">Messages</a>
       </li>
       <li class="nav-item">

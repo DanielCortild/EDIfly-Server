@@ -15,23 +15,9 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
-end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -42,24 +28,17 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
-end
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "bootstrap", '~> 4.0.0'
-gem 'jquery-rails'
-gem 'bootstrap-sass'
-gem "bootstrap_form", "~> 4.0"
-gem 'rack-cors'
+gem 'bootstrap', '~> 4.5'
+gem 'jquery-rails', '~> 4.4'
+gem 'bootstrap_form', '~> 4.5'
 
-gem 'pg'
-gem 'devise'
+gem 'rack-cors', '~> 1.1', '>= 1.1.1'
+gem 'pg', '~> 1.2', '>= 1.2.3'
+gem 'devise', '~> 4.7', '>= 4.7.2'
 
-# un52gm*Y*y25NZBjVuJv&yhF2uLhBd+-Cj2E6Rj?6=TRWr^q#SAT%B+5Bg%rnEBP=pYvGE9_=*U%A+4J8PJ%WSg&_E^Yhb+hP5Lc
+gem 'rubyzip', '>= 1.2.1'
+gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
+gem 'axlsx_rails'

@@ -1,5 +1,4 @@
 class TestimonialsController < ApplicationController
-  before_action :authenticate_admin!
   before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
 
   def index

@@ -1,0 +1,10 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Downloads") do |sheet|
+  # Create the header row
+  sheet.add_row ["Sent At", "Name", "Company", "Email", "Message"]
+  # Create entries for each item
+  @messages.each do |item|
+    sheet.add_row [item.created_at, item.name, item.company, item.email, item.message]
+  end
+end

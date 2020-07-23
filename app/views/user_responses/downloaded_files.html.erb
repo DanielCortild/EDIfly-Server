@@ -1,5 +1,7 @@
-<h1>Downloaded Files</h1>
-
+<h1>
+  Downloaded Files
+  <%= link_to 'Download as Excel', downloaded_files_path(format: :xlsx), :class => "btn btn-info" %>
+</h1>
 <table class="table">
   <thead>
     <tr>

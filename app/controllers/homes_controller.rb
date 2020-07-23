@@ -1,5 +1,4 @@
 class HomesController < ApplicationController
-  before_action :authenticate_admin!
   before_action :set_home, only: [:show, :edit, :update, :destroy]
 
   # GET /homes
