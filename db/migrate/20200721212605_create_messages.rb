@@ -4,6 +4,7 @@ class CreateMessages < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :company
       t.string :email
+      t.string :concerning
       t.text :message
 
       t.timestamps

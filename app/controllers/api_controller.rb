@@ -61,7 +61,7 @@ class ApiController < ApplicationController
     params.require(:downloaded_file).permit(:name, :company, :email, :file)
   end
   def message_params
-    params.require(:message).permit(:name, :company, :email, :message)
+    params.require(:message).permit(:name, :company, :email, :concerning, :message)
   end
 
 end

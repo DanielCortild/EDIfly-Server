@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 2020_07_21_212605) do
     t.string "name"
     t.string "company"
     t.string "email"
+    t.string "concerning"
     t.text "message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
