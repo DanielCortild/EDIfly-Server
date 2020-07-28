@@ -1,0 +1,19 @@
+<%= bootstrap_form_for(blog, local: true) do |form| %>
+  <% if blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+      <ul>
+        <% blog.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.text_field :title %>
+  <%= form.text_area :content %>
+  <%= form.text_field :date %>
+  <%= form.primary %>
+  <%= link_to 'Back', blogs_path, :class => "btn btn-secondary"%>
+<% end %>

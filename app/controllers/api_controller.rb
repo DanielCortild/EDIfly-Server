@@ -7,6 +7,7 @@ class ApiController < ApplicationController
 
     @users = User.all
     @testimonials = Testimonial.all
+    @blogs = Blog.all
 
     @whitepapers = Whitepaper.all
     @faqs = Faq.all
@@ -24,6 +25,11 @@ class ApiController < ApplicationController
         author: testimonial.name,
         from: testimonial.from,
         date: testimonial.date
+      }},
+      blog: @blogs.map {|blog| {
+        title: blog.title,
+        content: blog.content,
+        date: blog.date
       }},
       downloads: {
         'Product Briefing': [],

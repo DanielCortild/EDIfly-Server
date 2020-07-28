@@ -11,6 +11,9 @@
       <li class="nav-item <%= 'active' if params[:controller] == 'testimonials' %>">
         <a class="nav-link" href="<%= testimonials_path %>">Testimonials</a>
       </li>
+      <li class="nav-item <%= 'active' if (params[:controller] == 'blogs') %>">
+        <a class="nav-link" href="<%= blogs_path %>">Blog</a>
+      </li>
       <li class="nav-item <%= 'active' if (params[:controller] == 'whitepapers' || params[:controller] == 'faqs' || params[:controller] == 'downloads') %>">
         <a class="nav-link" href="<%= downloads_path %>">Files</a>
       </li>
