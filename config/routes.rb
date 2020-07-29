@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :blogs
   devise_for :admins
 
   get '/messages', to: 'user_responses#messages'
@@ -11,9 +10,11 @@ Rails.application.routes.draw do
   get '/api', to: 'api#index'
 
   resources :homes
+  resources :product_briefings
   resources :faqs
   resources :whitepapers
   resources :testimonials
+  resources :blogs
   resources :users
   resources :teams
 

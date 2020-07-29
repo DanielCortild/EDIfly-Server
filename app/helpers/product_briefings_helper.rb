@@ -1,0 +1,2 @@
+module ProductBriefingsHelper
+end
