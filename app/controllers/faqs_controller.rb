@@ -10,9 +10,11 @@ class FaqsController < ApplicationController
 
   def new
     @faq = Faq.new
+    render "downloadable_files/new", :locals => {:file => @faq, :title => "FAQ"}
   end
 
   def edit
+    render "downloadable_files/edit", :locals => {:file => @faq, :title => "FAQ"}
   end
 
   def create
@@ -26,6 +28,7 @@ class FaqsController < ApplicationController
   end
 
   def update
+    @file = Faq.find(params[:id])
     if @faq.update(faq_params)
       redirect_to @faq, notice: 'Faq was successfully updated.'
     else

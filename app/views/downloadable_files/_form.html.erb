@@ -1,10 +1,10 @@
-<%= bootstrap_form_for(product_briefing) do |form| %>
-  <% if product_briefing.errors.any? %>
+<%= bootstrap_form_for(file) do |form| %>
+  <% if file.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(product_briefing.errors.count, "error") %> prohibited this product briefing from being saved:</h2>
+      <h2><%= pluralize(file.errors.count, "error") %> prohibited this file from being saved:</h2>
 
       <ul>
-        <% product_briefing.errors.full_messages.each do |message| %>
+        <% file.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>

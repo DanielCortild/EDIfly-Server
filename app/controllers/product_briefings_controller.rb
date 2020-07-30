@@ -12,17 +12,15 @@ class ProductBriefingsController < ApplicationController
   def show
   end
 
-  # GET /product_briefings/new
   def new
     @product_briefing = ProductBriefing.new
+    render "downloadable_files/new", :locals => {:file => @product_briefing, :title => "Product Briefing"}
   end
 
-  # GET /product_briefings/1/edit
   def edit
+    render "downloadable_files/edit", :locals => {:file => @product_briefing, :title => "Product Briefing"}
   end
 
-  # POST /product_briefings
-  # POST /product_briefings.json
   def create
     @product_briefing = ProductBriefing.new(product_briefing_params)
 
@@ -55,10 +53,7 @@ class ProductBriefingsController < ApplicationController
   # DELETE /product_briefings/1.json
   def destroy
     @product_briefing.destroy
-    respond_to do |format|
-      format.html { redirect_to product_briefings_url, notice: 'Product briefing was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to downloads_url, notice: 'Product briefing was successfully destroyed.'
   end
 
   private

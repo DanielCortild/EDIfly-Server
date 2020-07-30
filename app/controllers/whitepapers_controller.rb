@@ -10,9 +10,11 @@ class WhitepapersController < ApplicationController
 
   def new
     @whitepaper = Whitepaper.new
+    render "downloadable_files/new", :locals => {:file => @whitepaper, :title => "Whitepaper"}
   end
 
   def edit
+    render "downloadable_files/edit", :locals => {:file => @whitepaper, :title => "Whitepaper"}
   end
 
   def create
