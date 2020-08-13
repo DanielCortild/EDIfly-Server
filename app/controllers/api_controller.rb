@@ -9,8 +9,11 @@ class ApiController < ApplicationController
     @testimonials = Testimonial.all
     @blogs = Blog.all
 
+    @product_briefings = ProductBriefing.all
     @whitepapers = Whitepaper.all
     @faqs = Faq.all
+
+    @news = News.all.reverse_order
 
     render json: {
       message: @home.message,
@@ -32,7 +35,11 @@ class ApiController < ApplicationController
         date: blog.date
       }},
       downloads: {
-        'Product Briefing': [],
+        'Product Briefing': @product_briefings.map {|product_briefing|{
+          title: product_briefing.title,
+          filename: product_briefing.filename,
+          file_url: product_briefing.file.attached? ? url_for(product_briefing.file) : ''
+        }},
         'Whitepapers': @whitepapers.map {|whitepaper|{
           title: whitepaper.title,
           filename: whitepaper.filename,
@@ -43,7 +50,12 @@ class ApiController < ApplicationController
           filename: faq.filename,
           file_url: faq.file.attached? ? url_for(faq.file) : ''
         }},
-      }
+      },
+      news: @news.map {|news|{
+        title: news.title,
+        filename: news.filename,
+        file_url: news.file.attached? ? url_for(news.file) : ''
+      }}
     }
   end
 

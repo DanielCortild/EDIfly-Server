@@ -8,7 +8,9 @@
   <%= @product_briefing.filename %>
 </p>
 
-<a href="<%= url_for(@product_briefing.file) %>" class="btn btn-info" target="_blank">Open File</a> 
+<% if @product_briefing.file.attached? %>
+  <a href="<%= url_for(@product_briefing.file) %>" class="btn btn-info" target="_blank">Open File</a> 
+<% end %>
 <br /> <br />
 
 <div class="actions text-center">

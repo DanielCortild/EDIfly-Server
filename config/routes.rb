@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :news
   devise_for :admins
 
   get '/messages', to: 'user_responses#messages'

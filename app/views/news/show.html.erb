@@ -1,0 +1,19 @@
+<p>
+  <strong>Name:</strong>
+  <%= @news.title %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @news.filename %>
+</p>
+
+<% if @news.file.attached? %>
+  <a href="<%= url_for(@news.file) %>" class="btn btn-info" target="_blank">Open File</a> 
+<% end %>
+<br /> <br />
+
+<div class="actions text-center">
+  <%= link_to 'Edit', edit_news_path(@news), :class => "btn btn-primary" %>
+  <%= link_to 'Back', news_index_path, :class => "btn btn-secondary" %>
+</div>

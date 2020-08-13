@@ -11,7 +11,7 @@ class UserResponseMailer < ApplicationMailer
   private
 
     def receiverAddress
-      'edifly.receiver@gmail.com'
+      ENV['EDIFLY_RECEIVER_EMAIL']
     end
 
 end
