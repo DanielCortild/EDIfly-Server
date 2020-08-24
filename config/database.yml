@@ -1,15 +1,11 @@
 development:
   adapter: sqlite3
-  encoding: unicode
-  database: edifly
-  pool: 5
-  username: postgres
-  password: 12345678
+  database: db/developement.sqlite3
 
 test:
   adapter: sqlite3
-  encoding: unicode
-  database: edifly-test
-  pool: 5
-  username: postgres
-  password: 12345678
+  database: db/test.sqlite3
+
+production:
+  adapter: sqlite3
+  database: db/production.sqlite3
