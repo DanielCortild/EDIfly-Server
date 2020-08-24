@@ -1,4 +1,8 @@
 Rails.application.configure do
+
+  # Whitelist one hostname
+  config.hosts << "x.edifly.com"
+
   config.cache_classes = false
   config.eager_load = false
   config.consider_all_requests_local = true

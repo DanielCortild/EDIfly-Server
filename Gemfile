@@ -15,7 +15,6 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -36,13 +35,16 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Include bootstrap
 gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails', '~> 4.4'
 gem 'bootstrap_form', '~> 4.5'
 
+# Include Login Page
 gem 'rack-cors', '~> 1.1', '>= 1.1.1'
 gem 'devise', '~> 4.7', '>= 4.7.2'
 
+# Allow Excel Files to be created
 gem 'rubyzip', '>= 1.2.1'
 gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
 gem 'axlsx_rails'

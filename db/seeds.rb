@@ -1,9 +1,9 @@
-@admin = Admin.new(:email => "edifly.receiver@gmail.com",
+@admin = Admin.new(:email => "sales@edifly.com",
                    :password => "password",
                    :password_confirmation => "password")
 @admin.save
 
-@admin2 = Admin.new(:email => "test@test.com",
+@admin2 = Admin.new(:email => "daniel.cortild@gmail.com",
                     :password => "password",
                     :password_confirmation => "password")
 @admin2.save
