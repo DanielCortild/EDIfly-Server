@@ -1,18 +1,14 @@
 default: &default 
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  adapter: sqlite3
 
 development:
-  adapter: sqlite3
-  database: db/developement.sqlite3
+  <<: *default 
+  database: db/edifly-server.sqlite3
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  <<: *default 
+  database: db/edifly-server.sqlite3
 
 production:
   <<: *default 
-  database: edifly-server_production
-  username: deploy
-  password: Rails.application.credentials.dig(:production, :db_password)
+  database: db/edifly-server_production.sqlite3
