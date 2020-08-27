@@ -11,4 +11,4 @@ test:
 
 production:
   <<: *default 
-  database: db/edifly-server_production.sqlite3
+  database: ~/home/deploy/edifly-server/shared/db/production.sqlite3
