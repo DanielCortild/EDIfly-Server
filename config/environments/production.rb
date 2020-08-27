@@ -18,7 +18,7 @@ Rails.application.configure do
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
-  # config.require_master_key = true
+  config.require_master_key = true
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
@@ -62,8 +62,8 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :user_name            => ENV["EDIFLY_SERVER_GMAIL_USERNAME"],
-    :password             => ENV["EDIFLY_SERVER_GMAIL_PASSWORD"],
+    :user_name            => Rails.application.credentials.production[:sender_gmail_username],
+    :password             => Rails.application.credentials.production[:sender_gmail_password],
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
