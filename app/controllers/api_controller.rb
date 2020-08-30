@@ -63,6 +63,7 @@ class ApiController < ApplicationController
     @downloaded_file = DownloadedFile.new(downloaded_file_params)
     if @downloaded_file.save
       UserResponseMailer.with(downloaded_file: @downloaded_file).new_downloaded_file_email.deliver_later
+      UserResponseMailer.with(downloaded_file: @downloaded_file).new_downloaded_file_email_client.deliver_later
     end
   end
 
