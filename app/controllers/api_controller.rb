@@ -71,6 +71,7 @@ class ApiController < ApplicationController
     @message = Message.new(message_params)
     if @message.save
       UserResponseMailer.with(message: @message).new_message_email.deliver_later
+      UserResponseMailer.with(message: @message).new_message_email_client.deliver_later
     end
   end
 
