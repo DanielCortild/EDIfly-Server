@@ -12,4 +12,8 @@ class UserResponseMailerPreview < ActionMailer::Preview
     message = Message.new(name: "Joe Smith", company: "EDIfly", email: "joe.smith@email.com", concerning: "Something Interesting", message: "I want to place an order!")
     UserResponseMailer.with(message: message).new_message_email
   end
+  def new_message_email_client
+    message = Message.new(name: "Joe Smith", company: "EDIfly", email: "joe.smith@email.com", concerning: "Something Interesting", message: "I want to place an order!")
+    UserResponseMailer.with(message: message).new_message_email_client
+  end
 end

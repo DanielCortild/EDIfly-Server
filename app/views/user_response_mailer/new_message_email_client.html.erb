@@ -1,15 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <p>Thank you for your message! Here is the summary:</p>
-    <br>
-    <p>Name: <%= @message.name %></p>
-    <p>Company: <%= @message.company %></p>
-    <p>Email: <%= @message.email %></p>
-    <p>Concerning: <%= @message.concerning %></p>
-    <p>Message: <%= @message.message %></p>
-  </body>
-</html>
+<p>Dear <%= @message.name %>,</p>
+
+<p>hank you very much for your interest in EDIfly, our ground-breaking message broker for the aviation industry.</p>
+
+<p>Our team will contact you as soon as possible.</p>
+
+<p>Concerning: <%= @message.concerning %>
+<br>Your enquiry: <%= @message.message %></p>
+
+<p>For technical support matters, please write to <a href="mailto:support@edifly.com">support@edifly.com</a></p>
+
+<p>Best regards,
+<br>Ingo Roessler
+<br>Chief Commercial Officer</p>
+
+<p>Head-Quarters:
+<br>Innovative Software SARL
+<br>27, cité Holleschberg, 
+<br>5831 Hesperange, Luxembourg
+<br><a href="www.edifly.com">www.edifly.com</a></p>
